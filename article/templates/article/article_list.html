@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+</head>
+<body>
+
+    {% for article in object_list %}
+    {{ article.title }}<br>
+    {{ article.text|slice:":150" }}...<br><a href="#" style="color:blue;"> Więcej</a><br><br>
+    {% endfor %}
+
+</body>
+</html>
