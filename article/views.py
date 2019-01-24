@@ -4,6 +4,10 @@ from django.views import generic
 
 
 class IndexView(generic.ListView):
+    model = Article
+    paginate_by = 5
+    queryset = Article.objects.all().order_by('-added')
 
-    def get_queryset(self):
-        return Article.objects.all()
+
+
+

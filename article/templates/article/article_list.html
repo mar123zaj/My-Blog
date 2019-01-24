@@ -1,15 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Articles</title>
-</head>
-<body>
+{% extends 'article/base.html' %}
 
+{% block content %}
     {% for article in object_list %}
-    {{ article.title }}<br>
-    {{ article.text|slice:":150" }}...<br><a href="#" style="color:blue;"> Więcej</a><br><br>
-    {% endfor %}
 
-</body>
-</html>
+
+          <div class="post-preview">
+            <a href="#">
+              <h2 class="post-title" style="color:black">
+                {{ article.title }}
+              </h2>
+            </a>
+              <h3 class="post-subtitle" style="font-size:8pt;color:grey;width:450px;">
+                  {{ article.text|slice:":160" }}...</br>
+              </h3>
+
+            <p class="post-meta">Posted by
+              <a href="#">Author</a>
+              on {{ article.added|date:"M n 'y" }} at {{ article.added|date:'G:i' }}</p>
+          </div>
+
+    {% endfor %}
+          <!-- Pager -->
+        {% if page_obj.has_next %}
+          <div class="clearfix">
+            <a class="btn btn-primary float-right" href="?page={{ page_obj.next_page_number }}">Older Posts &rarr;</a>
+                  {% else %}
+
+        {% endif %}
+
+         {% if page_obj.has_previous %}
+              <a class="btn btn-primary float-left" href="?page={{ page_obj.previous_page_number }}">&larr; Newest Posts </a>
+                  {% else %}
+
+
+         {% endif %}
+          </div>
+
+
+
+
+
+
+{% endblock %}
