@@ -5,7 +5,7 @@
 
 
           <div class="post-preview">
-            <a href="#">
+            <a href="{% url 'detail' article.id %}">
               <h2 class="post-title" style="color:black">
                 {{ article.title }}
               </h2>
@@ -16,7 +16,7 @@
 
             <p class="post-meta">Posted by
               <a href="#">Author</a>
-              on {{ article.added|date:"M n 'y" }} at {{ article.added|date:'G:i' }}</p>
+              on {{ article.added|date:"M d 'y" }} at {{ article.added|date:'G:i' }}</p>
           </div>
 
     {% endfor %}
@@ -24,21 +24,17 @@
         {% if page_obj.has_next %}
           <div class="clearfix">
             <a class="btn btn-primary float-right" href="?page={{ page_obj.next_page_number }}">Older Posts &rarr;</a>
-                  {% else %}
+        {% else %}
 
         {% endif %}
 
          {% if page_obj.has_previous %}
-              <a class="btn btn-primary float-left" href="?page={{ page_obj.previous_page_number }}">&larr; Newest Posts </a>
-                  {% else %}
+
+         {% else %}
 
 
          {% endif %}
           </div>
-
-
-
-
 
 
 {% endblock %}
