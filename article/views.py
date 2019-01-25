@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Article, Commentary
 from django.views import generic
+from django.contrib.auth.views import LoginView, LogoutView
 
 
 class IndexView(generic.ListView):
@@ -11,5 +12,9 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     model = Article
+
+
+class OutUser(LogoutView):
+    next_page = '/'
 
 
