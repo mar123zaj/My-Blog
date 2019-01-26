@@ -29,5 +29,5 @@ class ContactView(FormView):
     def form_valid(self, form):
         # This method is called when valid form data has been POSTed.
         # It should return an HttpResponse.
-        send_mail('Test subject', 'Look at this message.', 'marcin_1995@tlen.pl', ['', ], fail_silently=False)
+        form.send_email()
         return super().form_valid(form)

@@ -9,23 +9,22 @@ https://docs.djangoproject.com/en/2.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
+import os
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'alacris.1995@gmail.com'
-EMAIL_HOST_PASSWORD = 'jujkabujka1'
+EMAIL_HOST_USER = 'myblog.testmail.django@gmail.com'
+EMAIL_HOST_PASSWORD = 'testowekonto'
 EMAIL_PORT = 587
 
 
-
-import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
+# See https://docs.djangoproject.com/len/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '4&tl74=ws7wz%_t0*r4-ed)-7jqd7suslqbvo-(b@u=tdl0w9e'
