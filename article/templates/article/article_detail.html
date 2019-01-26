@@ -37,26 +37,31 @@
     </article>
 
     <section>
+    {% if user.is_authenticated %}
+        <div class="container" style="margin-top:30px;">
 
-    <div class="container" style="margin-top:30px;">
-
-      <div class="row">
-          <h1>Comments section</h1>
-          {% for comment in article.commentary_set.all %}
-            <div class="col-lg-8 col-md-10 mx-auto" style="margin-top:20px;border: 1px solid grey;border-radius:8px;clear:both;" >
-
+          <div class="row">
+              <h1>Comments section</h1>
+              {% for comment in article.commentary_set.all %}
+                <div class="col-lg-8 col-md-10 mx-auto" style="margin-top:20px;border: 1px solid grey;border-radius:8px;clear:both;" >
                     <div style="color:#29BBAF;float:left;"><img src="https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" style="width:50px;height:50px">{{ comment.nick }}</div>
-                <div class="float-right" style="font-size:12px;padding-top:15px">{{comment.added}}</div>
-                <div style="clear:both;font-size:12px;padding:10px 0px 10px;">{{ comment.comment }}</div>
-            </div>
-          {% endfor %}
+                    <div class="float-right" style="font-size:12px;padding-top:15px">{{comment.added}}</div>
+                    <div style="clear:both;font-size:12px;padding:10px 0px 10px;">{{ comment.comment }}</div>
+                </div>
+              {% endfor %}
 
-      </div>
-        <div class="clearfix d-flex justify-content-center" style="padding-top:20px;">
-          <a class="btn btn-primary float-center" href=""><i class="fa fa-comment" aria-hidden="true"></i> Add comment</a>
-           </div>
-    </div>
+          </div>
+            <div class="clearfix d-flex justify-content-center" style="padding-top:20px;">
+              <a class="btn btn-primary float-center" href=""><i class="fa fa-comment" aria-hidden="true"></i> Add comment</a>
+            </div>
+                {% else %}
+        <h4>You need to be <a href="{% url 'login' %}">Logged In</a> to comment and read comments.</h4>
+        </div>
+
+
+    {% endif %}
     </section>
+
 
 
 {% endblock %}
