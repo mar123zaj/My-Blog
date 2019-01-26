@@ -2,8 +2,14 @@ from django.shortcuts import render
 from .models import Article, Commentary
 from django.views import generic
 from django.contrib.auth.views import LoginView, LogoutView, FormView
+from django.contrib.auth.views import (
+    PasswordResetView,
+    PasswordResetDoneView,
+    PasswordResetConfirmView,
+    PasswordResetCompleteView
+)
 from django.core.mail import send_mail
-from article.forms import ContactForm
+from article.forms import ContactForm, PasswordResetForm
 from django.views.generic.edit import FormView
 
 
@@ -19,6 +25,17 @@ class DetailView(generic.DetailView):
 
 class OutUser(LogoutView):
     next_page = '/'
+
+
+class PasswordReset(PasswordResetView):
+    form_class =  PasswordResetForm
+    def form_valid(self, form):
+        # This method is called when valid form data has been POSTed.
+        # It should return an HttpResponse.
+        if form.is_valid():
+            form.save()
+            form.send_email()
+            return super().form_valid(form)
 
 
 class ContactView(FormView):
