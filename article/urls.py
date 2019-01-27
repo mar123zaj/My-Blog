@@ -16,4 +16,5 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('article/create/', CreateArticle.as_view(), name='create_art'),
     path('article/<int:pk>/comment/create/', add_comment, name='create_com'),
+    path('/activate/<slug:uidb64>/<slug:token>/', add_comment, name='create_com'),
 ]
