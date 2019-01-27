@@ -1,11 +1,15 @@
 from django.shortcuts import render
-from .models import Article
+from .models import Article, Commentary
 from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LogoutView, FormView
 from django.contrib.auth.views import PasswordResetView
-from article.forms import ContactForm
+from article.forms import ContactForm, CommentForm
 from django.views.generic.edit import FormView
 from django.contrib.auth.forms import PasswordResetForm
+from django.http import HttpResponseRedirect
+from django.shortcuts import get_object_or_404, redirect
+
 
 class IndexView(generic.ListView):
     model = Article
@@ -40,3 +44,28 @@ class ContactView(FormView):
 
 def thanks(request):
     return render(request, template_name='thanks.html')
+
+
+class CreateArticle(CreateView):
+    model = Article
+    fields = ['title', 'text', 'picture']
+
+
+class CreateComment(CreateView):
+    model = Commentary
+    fields = ['title', 'text', 'picture']
+
+
+
+def add_comment(request, pk):
+    article = get_object_or_404(Article, pk=pk)
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            commentary = form.save(commit=False)
+            commentary.article = article
+            commentary.save()
+            return redirect('detail', pk=article.pk)
+    else:
+        form = CommentForm()
+    return render(request, 'article/commentary_form.html', {'form': form})

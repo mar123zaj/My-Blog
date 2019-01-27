@@ -1,6 +1,10 @@
 from django.urls import path, include
 from django.shortcuts import render
-from .views import IndexView, DetailView, OutUser, ContactView, PasswordReset, thanks
+from .views import (
+    IndexView, DetailView, OutUser,
+    ContactView, PasswordReset, thanks,
+    CreateArticle, add_comment
+)
 
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
@@ -10,4 +14,6 @@ urlpatterns = [
     path('accounts/logout/', OutUser.as_view(), name='log'),
     path('accounts/password_reset/', PasswordReset.as_view(), name='reset'),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('article/create/', CreateArticle.as_view(), name='create_art'),
+    path('article/<int:pk>/comment/create/', add_comment, name='create_com'),
 ]
