@@ -9,7 +9,7 @@ class Article(models.Model):
     title = models.CharField(max_length=150)
     added = models.DateTimeField(auto_now_add=True, blank=True)
     text = models.TextField()
-    picture = models.CharField(max_length=100)
+    author = models.ForeignKey('Profile', on_delete=models.CASCADE, default='')
 
     def get_absolute_url(self):
         return reverse('detail', kwargs={'pk': self.pk})
@@ -19,14 +19,13 @@ class Article(models.Model):
 
 
 class Commentary(models.Model):
-    nick = models.CharField(max_length=20)
-    title = models.CharField(max_length=15)
+    nick = models.ForeignKey('Profile', on_delete=models.CASCADE, max_length=20)
     comment = models.TextField(max_length=300)
     article = models.ForeignKey(Article, on_delete=models.CASCADE)
     added = models.DateTimeField(auto_now_add=True, blank=True)
 
     def __str__(self):
-        return self.title
+        return self.comment
 
 
 class Profile(models.Model):
@@ -34,6 +33,9 @@ class Profile(models.Model):
     bio = models.TextField(max_length=500, blank=True)
     country = models.CharField(max_length=30, blank=True)
     email_confirmed = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.user.username
 
 
 @receiver(post_save, sender=User)

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Article, Commentary
+from .models import Article, Commentary, Profile
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LogoutView, FormView
@@ -20,7 +20,7 @@ from django.shortcuts import render, redirect
 from django.utils.encoding import force_text
 from django.utils.http import urlsafe_base64_decode
 from article.tokens import account_activation_token
-
+from django.http import Http404
 
 class IndexView(generic.ListView):
     model = Article
@@ -57,9 +57,6 @@ def thanks(request):
     return render(request, 'thanks.html')
 
 
-
-
-
 def add_article(request):
     user = request.user
     form = ArticleForm()
@@ -69,6 +66,7 @@ def add_article(request):
         form = ArticleForm(request.POST)
         if form.is_valid():
             article = form.save(commit=False)
+            article.author = user
             article.save()
             return redirect('detail', pk=article.pk)
     else:
@@ -83,6 +81,7 @@ def add_comment(request, pk):
         if form.is_valid():
             commentary = form.save(commit=False)
             commentary.article = article
+            commentary.nick = user
             commentary.save()
             return redirect('detail', pk=article.pk)
     else:
@@ -97,17 +96,12 @@ def is_authenticated(user):
 
 
 def signup(request):
-
     form = SignUpForm()
-    if not is_authenticated(request.user):
-        return render(request, 'registration/signup.html', {'form': form})
-    elif request.method == 'POST':
+    if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
-            group = Group(name='Users')
             user = form.save(commit=False)
             user.is_active = False
-            user.groups.add(group)
             user.save()
             current_site = get_current_site(request)
             subject = 'Activate Your MySite Account'
@@ -119,6 +113,8 @@ def signup(request):
             })
             user.email_user(subject, message)
             return redirect('account_activation_sent')
+    elif not is_authenticated(request.user):
+        return render(request, 'registration/signup.html', {'form': form})
     else:
         return redirect('logout')
 
@@ -131,6 +127,8 @@ def activate(request, uidb64, token):
         user = None
 
     if user is not None and account_activation_token.check_token(user, token):
+        group = get_object_or_404(Group, name='Users')
+        user.groups.add(group)
         user.is_active = True
         user.profile.email_confirmed = True
         user.groups.add(Group.objects.get(name='Users'))
@@ -143,3 +141,20 @@ def activate(request, uidb64, token):
 
 def account_activation_sent(request):
     return render(request, 'registration/account_activation_sent.html')
+
+
+class EditProfile(UpdateView):
+    template_name = 'article/profile_edit.html'
+    model = Profile
+    fields = ['bio', 'country']
+
+    def get_object(self, queryset=None):
+        return self.model.objects.get(user=self.request.user)
+
+
+class ViewProfile(generic.DetailView):
+    model = Profile
+    template_name = 'article/profile.html'
+
+    def get_object(self, queryset=None):
+        return self.model.objects.get(user=self.request.user)

@@ -22,14 +22,14 @@ class ArticleForm(forms.ModelForm):
 
     class Meta:
         model = Article
-        fields = ('title', 'text', 'picture', )
+        fields = ('title', 'text',)
 
 
 class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Commentary
-        fields = ('nick', 'title', 'comment', )
+        fields = ('comment', )
 
 
 class SignUpForm(UserCreationForm):

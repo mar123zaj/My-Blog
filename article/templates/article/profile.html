@@ -1,0 +1,17 @@
+{% extends 'article/base.html' %}
+
+{% block content %}
+<ul class="list-group list-group-flush">
+    <li class="list-group-item"><b>About me:</b> {{ profile.bio }}</li>
+    <li class="list-group-item"><b>From:</b> {{ profile.country }}<br></li>
+</ul>
+
+{% if request.user.username == profile.user.username %}
+<div class="container">
+
+            <div class="clearfix d-flex justify-content-center" style="padding-top:20px;">
+              <a class="btn btn-primary float-center" href="{% url 'edit_profile' %}"><i class="fa fa-edit" aria-hidden="true"></i> Edit your profile</a>
+            </div>
+</div>
+{% endif %}
+{% endblock %}

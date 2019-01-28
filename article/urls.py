@@ -4,7 +4,7 @@ from .views import (
     IndexView, DetailView, OutUser,
     ContactView, PasswordReset, thanks,
     add_article, add_comment, activate,
-    signup, account_activation_sent
+    signup, account_activation_sent, EditProfile, ViewProfile
 )
 
 
@@ -21,4 +21,6 @@ urlpatterns = [
     path('signup/', signup, name='signup'),
     path('account_activation_sent/', account_activation_sent, name='account_activation_sent'),
     path('activate/<token>/<uidb64>/', activate, name='activate'),
+    path('profile/', ViewProfile.as_view(), name='profile'),
+    path('profile/edit/', EditProfile.as_view(), name='edit_profile'),
 ]

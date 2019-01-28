@@ -64,8 +64,11 @@
     <ul class="nav navbar-nav navbar-right">
         {% if user.is_authenticated %}
       <li class="nav-item"><a class="nav-link"><span class="fa fa-user-alt"></span> {{ user }}</a></li>
+      {% load article_extras %}
+      {% if request.user|has_group:'Authors' %}
         <li class="nav-item"><a class="nav-link" href="{% url 'create_art' %}"><span class="fas fa-plus"></span> Add article</a></li>
-      <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-hammer"></span> Settings</a></li>
+      {% endif %}
+      <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}"><span class="fa fa-hammer"></span> Settings</a></li>
       <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}"><span class="fa fa-sign-out-alt"></span> Log Out</a></li>
         {% else %}
       <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}"><span class="fa fa-user-plus"></span> Sign Up</a></li>
