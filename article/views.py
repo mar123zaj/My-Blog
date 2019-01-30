@@ -4,7 +4,7 @@ from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LogoutView, FormView
 from django.contrib.auth.views import PasswordResetView
-from article.forms import ContactForm, SignUpForm, CommentForm, ArticleForm
+from article.forms import ContactForm, SignUpForm, CommentForm, ArticleForm, ProfileForm
 from django.views.generic.edit import FormView
 from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.sites.shortcuts import get_current_site
@@ -21,6 +21,8 @@ from django.utils.encoding import force_text
 from django.utils.http import urlsafe_base64_decode
 from article.tokens import account_activation_token
 from django.http import Http404
+from django.urls import reverse
+
 
 class IndexView(generic.ListView):
     model = Article
@@ -60,15 +62,15 @@ def thanks(request):
 def add_article(request):
     user = request.user
     form = ArticleForm()
-    if user.has_perm('article.can_add_article'):
-        return render(request, 'article/article_form.html', {'form': form})
-    elif request.method == 'POST':
+    if request.method == 'POST':
         form = ArticleForm(request.POST)
         if form.is_valid():
             article = form.save(commit=False)
-            article.author = user
+            article.author = user.profile
             article.save()
             return redirect('detail', pk=article.pk)
+    elif user.groups.filter(name="Authors").count():
+        return render(request, 'article/article_form.html', {'form': form})
     else:
         return render(request, 'article/permission.html')
 
@@ -76,12 +78,12 @@ def add_article(request):
 def add_comment(request, pk):
     user = request.user
     article = get_object_or_404(Article, pk=pk)
-    if request.method == "POST" and user.groups.filter(name="Users").count():
+    if request.method == "POST" and (user.groups.filter(name="Users").count() or user.groups.filter(name="Authors").count()):
         form = CommentForm(request.POST)
         if form.is_valid():
             commentary = form.save(commit=False)
             commentary.article = article
-            commentary.nick = user
+            commentary.nick = user.profile
             commentary.save()
             return redirect('detail', pk=article.pk)
     else:
@@ -144,17 +146,23 @@ def account_activation_sent(request):
 
 
 class EditProfile(UpdateView):
-    template_name = 'article/profile_edit.html'
     model = Profile
-    fields = ['bio', 'country']
+    form_class = ProfileForm
+    template_name = "article/profile_edit.html"
+    success_url = '/'
 
-    def get_object(self, queryset=None):
-        return self.model.objects.get(user=self.request.user)
+    def get_object(self, *args, **kwargs):
+        user = get_object_or_404(User, pk=self.kwargs['pk'])
+
+        return user.profile
+
+    def get_success_url(self, *args, **kwargs):
+        return reverse("index")
 
 
-class ViewProfile(generic.DetailView):
-    model = Profile
-    template_name = 'article/profile.html'
 
-    def get_object(self, queryset=None):
-        return self.model.objects.get(user=self.request.user)
+def view_profile(request, pk):
+    profile = request.user.profile
+    user = request.user
+    return render(request, 'article/profile.html', {'user': user, 'profile': profile})
+

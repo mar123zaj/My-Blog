@@ -1,6 +1,6 @@
 {% extends 'article/base.html' %}
 
-{% block title %}Home page{% endblock %}
+
 
     {% block header %}
     <!-- Page Header -->
@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>My-Blog</h1>
+                <a class="navbar-brand" style="color:white;font-weight:bold" href="{% url 'index' %}"><h1>My-Blog</h1></a>
               <span class="subheading">A Blog About Things</span>
             </div>
           </div>

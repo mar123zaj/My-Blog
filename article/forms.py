@@ -1,20 +1,21 @@
 from django import forms
 from django.core.mail import send_mail
-from .models import Commentary, Article
+from .models import Commentary, Article, Profile
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import FormView
 
 
 class ContactForm(forms.Form):
-    name = forms.CharField()
+    your_mail = forms.EmailField(max_length=254)
     message = forms.CharField(widget=forms.Textarea)
 
     def send_email(self):
         send_mail(
             'Contact Us',
-            self.cleaned_data['message'],
+            self.cleaned_data['message'] + '\n\n\nContact mail: ' + self.cleaned_data['your_mail'],
             '',
-            ['alacris.1995@gmail.com']
+            ['myblog.testmail.django@gmail.com']
         )
 
 
@@ -39,3 +40,16 @@ class SignUpForm(UserCreationForm):
         model = User
         fields = ('username', 'email', 'password1', 'password2', )
 
+
+class ProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = Profile
+        fields = ('bio', 'country')
+
+    def save(self, user=None):
+        user_profile = super(ProfileForm, self).save(commit=False)
+        if user:
+            user_profile.user = user
+        user_profile.save()
+        return user_profile

@@ -7,20 +7,33 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/article/templates/article/article_detail.html" line="15" />
     <bookmark url="file://$PROJECT_DIR$/article/templates/article/base.html" line="30" />
-    <bookmark url="file://$PROJECT_DIR$/article/views.py" line="120" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b647a1e-801f-4319-8561-e1666da04d06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/article/migrations/0002_profile.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/article/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/templates/article/article_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/article/templates/article/article_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/templates/article/article_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/article/templates/article/article_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/templates/article/article_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/article/templates/article/article_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/templates/article/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/article/templates/article/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/templates/article/commentary_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/article/templates/article/commentary_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/templates/article/permission.html" beforeDir="false" afterPath="$PROJECT_DIR$/article/templates/article/permission.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/article/templates/article/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/article/templates/article/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/article/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/account_activation_invalid.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/account_activation_invalid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/account_activation_sent.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/account_activation_sent.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/password_reset_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/password_reset_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/thanks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/thanks.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,37 +45,38 @@
     <session id="2056350429">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.16" value="1" />
           <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="2" />
-          <entry key="html" value="5423" />
-          <entry key="py" value="6039" />
+          <entry key="html" value="4194" />
+          <entry key="py" value="2643" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="5423" />
-          <entry key="Python" value="6039" />
+          <entry key="HTML" value="4194" />
+          <entry key="Python" value="2643" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="6" />
-          <entry key="html" value="64" />
-          <entry key="py" value="46" />
+          <entry key="html" value="48" />
+          <entry key="py" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="6" />
-          <entry key="HTML" value="64" />
-          <entry key="Python" value="46" />
+          <entry key="HTML" value="48" />
+          <entry key="Python" value="26" />
         </counts>
       </usages-collector>
     </session>
@@ -70,67 +84,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/article/models.py">
+        <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <marker date="1548710925129" expanded="true" signature="219:224" ph="..." />
-                <marker date="1548710925129" expanded="true" signature="471:534" ph="..." />
-                <marker date="1548710925129" expanded="true" signature="612:872" ph="..." />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/article/forms.py">
+        <entry file="file://$PROJECT_DIR$/templates/registration/account_activation_sent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-                <marker date="1548708905147" expanded="true" signature="762:966" ph="..." />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/article/views.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/registration/account_activation_invalid.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-                <marker date="1548711428989" expanded="true" signature="1337:1409" ph="..." />
-                <marker date="1548711428989" expanded="true" signature="1534:1537" ph="..." />
-                <marker date="1548711428989" expanded="true" signature="1902:1944" ph="..." />
-                <marker date="1548711428989" expanded="true" signature="2478:2481" ph="..." />
-                <marker date="1548711428989" expanded="true" signature="4881:4886" ph="..." />
-                <marker date="1548711428989" expanded="true" signature="4986:4991" ph="..." />
-                <marker date="1548711428989" expanded="true" signature="5231:5296" ph="..." />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/registration/account_activation_email.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/templates/article/article_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+            <state relative-caret-position="221">
+              <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
               <folding>
                 <element signature="n#style#0;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#article#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/templates/article/article_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -148,12 +139,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/article/templates/article/article_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="54" column="16" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="54" selection-end-column="16" />
+            <state relative-caret-position="136">
+              <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#header#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#a#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article/templates/article/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/article/templates/article/commentary_form.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/article/templates/article/permission.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -163,8 +186,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -182,48 +205,44 @@
         <option value="$PROJECT_DIR$/article/static/article/clean-blog.min.css" />
         <option value="$PROJECT_DIR$/article/templates/article/x.html" />
         <option value="$PROJECT_DIR$/article/static/article/css/clean-blog.min.css" />
+        <option value="$PROJECT_DIR$/article/admin.py" />
         <option value="$PROJECT_DIR$/my_blog/urls.py" />
         <option value="$PROJECT_DIR$/my_blog/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/templates/registration/base_auth.html" />
         <option value="$PROJECT_DIR$/templates/registration/logged_out.html" />
+        <option value="$PROJECT_DIR$/templates/registration/password_reset_confirm.py" />
+        <option value="$PROJECT_DIR$/templates/registration/password_reset_email.html" />
+        <option value="$PROJECT_DIR$/article/templates/article/contact.html" />
+        <option value="$PROJECT_DIR$/my_blog/settings.py" />
+        <option value="$PROJECT_DIR$/article/models.py" />
+        <option value="$PROJECT_DIR$/article/templates/article/profile.html" />
+        <option value="$PROJECT_DIR$/article/views.py" />
+        <option value="$PROJECT_DIR$/article/urls.py" />
+        <option value="$PROJECT_DIR$/article/forms.py" />
+        <option value="$PROJECT_DIR$/article/templates/article/article_detail.html" />
+        <option value="$PROJECT_DIR$/article/templates/article/base.html" />
+        <option value="$PROJECT_DIR$/templates/registration/signup.html" />
+        <option value="$PROJECT_DIR$/templates/contact.html" />
+        <option value="$PROJECT_DIR$/templates/thanks.html" />
         <option value="$PROJECT_DIR$/article/templates/article/article_list.html" />
         <option value="$PROJECT_DIR$/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_form.html" />
-        <option value="$PROJECT_DIR$/templates/registration/password_reset_confirm.py" />
-        <option value="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" />
+        <option value="$PROJECT_DIR$/templates/registration/password_reset_done.html" />
         <option value="$PROJECT_DIR$/templates/registration/password_reset_complete.html" />
-        <option value="$PROJECT_DIR$/article/templates/article/contact.html" />
-        <option value="$PROJECT_DIR$/templates/contact.html" />
-        <option value="$PROJECT_DIR$/my_blog/settings.py" />
-        <option value="$PROJECT_DIR$/templates/registration/password_reset_email.html" />
-        <option value="$PROJECT_DIR$/templates/thanks.html" />
+        <option value="$PROJECT_DIR$/templates/registration/password_reset_confirm.html" />
+        <option value="$PROJECT_DIR$/templates/registration/account_activation_sent.html" />
+        <option value="$PROJECT_DIR$/templates/registration/account_activation_invalid.html" />
         <option value="$PROJECT_DIR$/article/templates/article/article_form.html" />
         <option value="$PROJECT_DIR$/article/templates/article/commentary_form.html" />
-        <option value="$PROJECT_DIR$/article/tokens.py" />
-        <option value="$PROJECT_DIR$/templates/registration/password_reset_done.html" />
-        <option value="$PROJECT_DIR$/templates/registration/account_activation_sent.html" />
-        <option value="$PROJECT_DIR$/templates/registration/signup.html" />
-        <option value="$PROJECT_DIR$/article/admin.py" />
-        <option value="$PROJECT_DIR$/templates/registration/account_activation_invalid.html" />
-        <option value="$PROJECT_DIR$/templates/registration/account_activation_email.html" />
         <option value="$PROJECT_DIR$/article/templates/article/permission.html" />
-        <option value="$PROJECT_DIR$/article/templates/article/profile_edit.html" />
-        <option value="$PROJECT_DIR$/article/urls.py" />
-        <option value="$PROJECT_DIR$/article/templates/article/article_detail.html" />
-        <option value="$PROJECT_DIR$/article/templatetags/article_extras.py" />
-        <option value="$PROJECT_DIR$/article/templates/article/base.html" />
-        <option value="$PROJECT_DIR$/article/templates/article/profile.html" />
-        <option value="$PROJECT_DIR$/article/forms.py" />
-        <option value="$PROJECT_DIR$/article/models.py" />
-        <option value="$PROJECT_DIR$/article/views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1767" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1364" />
-    <option name="height" value="728" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -250,7 +269,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -315,6 +333,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -358,11 +377,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20722434" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24330357" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="0" weight="0.32884097" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -397,7 +416,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/apps.py">
+    <entry file="file://$PROJECT_DIR$/article/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
@@ -436,191 +455,209 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/base_auth.html" />
     <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_confirm.py" />
-    <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_complete.html">
+    <entry file="file://$PROJECT_DIR$/article/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_confirm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/thanks.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/article/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/templatetags/article_extras.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/templates/article/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="95" selection-start-line="12" selection-start-column="95" selection-end-line="12" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="51" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/templates/article/profile_edit.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/article/tokens.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        <state>
           <folding>
             <element signature="e#0#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_done.html">
+    <entry file="file://$PROJECT_DIR$/article/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="357">
+          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../simple-signup-master/confirmation-email/mysite/templates/signup.html">
+    <entry file="file://$PROJECT_DIR$/article/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/article/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="53" column="25" lean-forward="true" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1548800229170" expanded="true" signature="5432:5436" ph="..." />
+            <marker date="1548800229170" expanded="true" signature="5501:5614" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/signup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../simple-signup-master/confirmation-email/mysite/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/account_activation_sent.html">
+    <entry file="file://$PROJECT_DIR$/templates/thanks.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/account_activation_email.html">
+    <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="34" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_email.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="85" />
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_done.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_complete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/password_reset_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="20" lean-forward="true" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        <state relative-caret-position="153">
+          <caret line="9" column="11" lean-forward="true" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/account_activation_sent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/account_activation_invalid.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" lean-forward="true" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="17">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_blog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="46" column="33" lean-forward="true" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/templates/article/commentary_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="21" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_blog/__init__.py">
+    <entry file="file://$PROJECT_DIR$/templates/registration/account_activation_email.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/templatetags/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/templates/article/profile_edit.html">
+    <entry file="file://$PROJECT_DIR$/article/templates/article/article_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/templates/article/profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="221">
+          <caret line="13" column="18" lean-forward="true" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#header#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/migrations/0003_auto_20190128_2157.py">
+    <entry file="file://$PROJECT_DIR$/article/templates/article/article_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#49#89#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/migrations/0001_initial.py">
+    <entry file="file://$PROJECT_DIR$/article/templates/article/article_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="136">
+          <caret line="8" column="29" lean-forward="true" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
           <folding>
-            <element signature="e#49#81#0" expanded="true" />
+            <element signature="n#style#0;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#a#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/article/templates/article/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="63" column="44" lean-forward="true" selection-start-line="63" selection-start-column="44" selection-end-line="63" selection-end-column="44" />
+        <state relative-caret-position="340">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding>
             <element signature="n#style#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -628,110 +665,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/article/templatetags/article_extras.py">
+    <entry file="file://$PROJECT_DIR$/article/templates/article/commentary_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/article/templates/article/permission.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" lean-forward="true" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/templates/article/article_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#div#0;n#div#1;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/templates/article/article_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/templates/article/article_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="54" column="16" lean-forward="true" selection-start-line="42" selection-start-column="10" selection-end-line="54" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#header#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#a#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1548710925129" expanded="true" signature="219:224" ph="..." />
-            <marker date="1548710925129" expanded="true" signature="471:534" ph="..." />
-            <marker date="1548710925129" expanded="true" signature="612:872" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-            <marker date="1548708905147" expanded="true" signature="762:966" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/article/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="71" column="9" lean-forward="true" selection-start-line="71" selection-start-column="9" selection-end-line="71" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-            <marker date="1548711428989" expanded="true" signature="1337:1409" ph="..." />
-            <marker date="1548711428989" expanded="true" signature="1534:1537" ph="..." />
-            <marker date="1548711428989" expanded="true" signature="1902:1944" ph="..." />
-            <marker date="1548711428989" expanded="true" signature="2478:2481" ph="..." />
-            <marker date="1548711428989" expanded="true" signature="4881:4886" ph="..." />
-            <marker date="1548711428989" expanded="true" signature="4986:4991" ph="..." />
-            <marker date="1548711428989" expanded="true" signature="5231:5296" ph="..." />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
         </state>
       </provider>
     </entry>

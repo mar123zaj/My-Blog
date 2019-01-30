@@ -4,7 +4,8 @@ from .views import (
     IndexView, DetailView, OutUser,
     ContactView, PasswordReset, thanks,
     add_article, add_comment, activate,
-    signup, account_activation_sent, EditProfile, ViewProfile
+    signup, account_activation_sent, EditProfile,
+    view_profile
 )
 
 
@@ -12,7 +13,7 @@ urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('article/<int:pk>/', DetailView.as_view(), name='detail'),
     path('contact/', ContactView.as_view(), name='contact'),
-    path('contact/thanks', thanks, name='thanks'),
+    path('contact/thanks/', thanks, name='thanks'),
     path('accounts/logout/', OutUser.as_view(), name='log'),
     path('accounts/password_reset/', PasswordReset.as_view(), name='reset'),
     path('accounts/', include('django.contrib.auth.urls')),
@@ -21,6 +22,8 @@ urlpatterns = [
     path('signup/', signup, name='signup'),
     path('account_activation_sent/', account_activation_sent, name='account_activation_sent'),
     path('activate/<token>/<uidb64>/', activate, name='activate'),
-    path('profile/', ViewProfile.as_view(), name='profile'),
-    path('profile/edit/', EditProfile.as_view(), name='edit_profile'),
+    path('profile/<int:pk>/', view_profile, name='profile'),
+    path('profile/edit/<int:pk>', EditProfile.as_view(), name='edit_profile'),
+
+
 ]
