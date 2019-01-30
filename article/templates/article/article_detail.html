@@ -27,7 +27,7 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
                                         <div class="meta" style="padding-bottom:20px;font-size:12px;">Posted by
-                <a href="#">Start Bootstrap</a>
+                <a>{{ article.author }}</a>
                 on on {{ article.added|date:"M d 'y" }} at {{ article.added|date:'G:i' }}</div>
             {{ article.text }}
 
@@ -45,9 +45,23 @@
               {% for comment in article.commentary_set.all %}
                 <div class="col-lg-8 col-md-10 mx-auto" style="margin-top:20px;border: 1px solid grey;border-radius:8px;clear:both;" >
                     {% load static %}
-                    <div style="color:#29BBAF;float:left;"><img src="{% static 'article/img/blank-profile-picture.png' %}" style="width:50px;height:50px">{{ comment.nick }}</div>
-                    <div class="float-right" style="font-size:12px;padding-top:15px">{{comment.added}}</div>
-                    <div style="clear:both;font-size:12px;padding:10px 0px 10px;">{{ comment.comment }}</div>
+                    <div style="color:#29BBAF;float:left;padding-top:10px;">
+                        <img src="{% static 'article/img/blank-profile-picture.png' %}" style="width:50px;height:50px">  {{ comment.nick }}
+                    </div>
+                    <div class="float-right" style="font-size:12px;padding-top:25px">
+                        {{comment.added}}
+                    </div>
+                    <div style="clear:both;font-size:12px;padding:10px 0px 10px;">
+                        {{ comment.comment }}
+                    </div>
+                    {% if request.user == comment.nick.user  %}
+                    <div class="float-left" style="font-size:20px;padding:10px 0px 10px;">
+                        <a style="color:#29BBAF;" href="{% url 'edit_comment' comment.id %}"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="float-right" style="font-size:20px;padding:10px 0px 10px;">
+                        <a style="color:#ff0000;" href="{% url 'delete_comment' pk=comment.id %}"><i class="fa fa-trash-alt" aria-hidden="true"></i></a>
+                    </div>
+                    {% endif %}
                 </div>
               {% endfor %}
 

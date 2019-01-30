@@ -3,7 +3,6 @@ from django.core.mail import send_mail
 from .models import Commentary, Article, Profile
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-from django.views.generic import FormView
 
 
 class ContactForm(forms.Form):

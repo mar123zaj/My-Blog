@@ -4,7 +4,7 @@
 
     {% block header %}
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')">
+    <header class="masthead" style="background-image: url('https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
@@ -33,7 +33,7 @@
               </h3>
 
             <p class="post-meta">Posted by
-              <a href="#">Author</a>
+              <a>{{ article.author }}</a>
               on {{ article.added|date:"M d 'y" }} at {{ article.added|date:'G:i' }}</p>
           </div>
 
@@ -47,7 +47,7 @@
         {% endif %}
 
          {% if page_obj.has_previous %}
-
+              <a class="btn btn-primary float-left" href="?page={{ page_obj.previous_page_number }}">← Newest Posts</a>
          {% else %}
 
 

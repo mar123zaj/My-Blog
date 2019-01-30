@@ -1,26 +1,21 @@
-from django.shortcuts import render
 from .models import Article, Commentary, Profile
 from django.views import generic
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.contrib.auth.views import LogoutView, FormView
+from django.contrib.auth.views import LogoutView
 from django.contrib.auth.views import PasswordResetView
 from article.forms import ContactForm, SignUpForm, CommentForm, ArticleForm, ProfileForm
 from django.views.generic.edit import FormView
 from django.contrib.auth.forms import PasswordResetForm
 from django.contrib.sites.shortcuts import get_current_site
-from django.shortcuts import render, redirect
 from django.utils.encoding import force_bytes
 from django.utils.http import urlsafe_base64_encode
 from django.template.loader import render_to_string
 from article.tokens import account_activation_token
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import get_object_or_404
 from django.contrib.auth import login
 from django.contrib.auth.models import User, Group
 from django.shortcuts import render, redirect
 from django.utils.encoding import force_text
 from django.utils.http import urlsafe_base64_decode
-from article.tokens import account_activation_token
-from django.http import Http404
 from django.urls import reverse
 
 
@@ -91,6 +86,19 @@ def add_comment(request, pk):
     return render(request, 'article/commentary_form.html', {'form': form})
 
 
+def edit_comment(request, pk):
+    user = request.user
+    comment = get_object_or_404(Commentary, pk=pk)
+    form = CommentForm(instance=comment)
+    if request.method == 'POST' and user == comment.nick.user:
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            return redirect('index')
+    return render(request, 'article/edit_comment.html',
+                  {'form': form, 'user': user, 'comment': comment})
+
+
 def is_authenticated(user):
     if callable(user.is_authenticated):
         return user.is_authenticated()
@@ -98,7 +106,6 @@ def is_authenticated(user):
 
 
 def signup(request):
-    form = SignUpForm()
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -116,6 +123,7 @@ def signup(request):
             user.email_user(subject, message)
             return redirect('account_activation_sent')
     elif not is_authenticated(request.user):
+        form = SignUpForm()
         return render(request, 'registration/signup.html', {'form': form})
     else:
         return redirect('logout')
@@ -145,7 +153,7 @@ def account_activation_sent(request):
     return render(request, 'registration/account_activation_sent.html')
 
 
-class EditProfile(UpdateView):
+class EditProfile(generic.UpdateView):
     model = Profile
     form_class = ProfileForm
     template_name = "article/profile_edit.html"
@@ -153,16 +161,22 @@ class EditProfile(UpdateView):
 
     def get_object(self, *args, **kwargs):
         user = get_object_or_404(User, pk=self.kwargs['pk'])
-
         return user.profile
 
     def get_success_url(self, *args, **kwargs):
         return reverse("index")
 
 
-
 def view_profile(request, pk):
     profile = request.user.profile
-    user = request.user
-    return render(request, 'article/profile.html', {'user': user, 'profile': profile})
+    return render(request, 'article/profile.html', {'profile': profile})
 
+
+def delete_comment(request, pk):
+    comment = get_object_or_404(Commentary, pk=pk)
+    comment.delete()
+    return redirect('index')
+
+
+def about(request):
+    return render(request, 'about.html')

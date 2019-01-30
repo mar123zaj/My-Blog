@@ -39,18 +39,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+            <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
       </li>
     </ul>
 
@@ -62,7 +54,7 @@
       {% if request.user|has_group:'Authors' %}
         <li class="nav-item"><a class="nav-link" href="{% url 'create_art' %}"><span class="fas fa-plus"></span> Add article</a></li>
       {% endif %}
-      <li class="nav-item"><a class="nav-link" href="{% url 'profile' user.id %}"><span class="fa fa-hammer"></span> Settings</a></li>
+      <li class="nav-item"><a class="nav-link" href="{% url 'profile' pk=request.user.profile.id %}"><span class="fa fa-hammer"></span> Settings</a></li>
       <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}"><span class="fa fa-sign-out-alt"></span> Log Out</a></li>
         {% else %}
       <li class="nav-item"><a class="nav-link" href="{% url 'signup' %}"><span class="fa fa-user-plus"></span> Sign Up</a></li>
@@ -117,7 +109,7 @@
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://github.com/mar123zaj/My-Blog">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-github fa-stack-1x fa-inverse"></i>

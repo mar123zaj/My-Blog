@@ -1,11 +1,11 @@
 from django.urls import path, include
-from django.shortcuts import render
 from .views import (
     IndexView, DetailView, OutUser,
     ContactView, PasswordReset, thanks,
     add_article, add_comment, activate,
     signup, account_activation_sent, EditProfile,
-    view_profile
+    view_profile, edit_comment,
+    about, delete_comment
 )
 
 
@@ -23,7 +23,9 @@ urlpatterns = [
     path('account_activation_sent/', account_activation_sent, name='account_activation_sent'),
     path('activate/<token>/<uidb64>/', activate, name='activate'),
     path('profile/<int:pk>/', view_profile, name='profile'),
-    path('profile/edit/<int:pk>', EditProfile.as_view(), name='edit_profile'),
-
+    path('profile/edit/<int:pk>/', EditProfile.as_view(), name='edit_profile'),
+    path('article/comment/edit/<int:pk>/', edit_comment, name='edit_comment'),
+    path('article/comment/delete/<int:pk>/', delete_comment, name='delete_comment'),
+    path('about/', about, name='about'),
 
 ]
