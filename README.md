@@ -33,4 +33,4 @@ Notice, that this form let's everyone who visit your site to contact with you.
 
 There are a couple of other things in My-Blog, but you can just visit demo, and find out by yourself:
 
-LINK
+http://174.138.14.142:8000/
