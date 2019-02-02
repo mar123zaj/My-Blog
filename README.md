@@ -32,7 +32,6 @@ Notice, that this form let's everyone who visit your site to contact with you.
 ## Others
 
 There are a couple of other things in My-Blog, but you can just visit demo, and find out by yourself:
-
 http://mar123zaj.pythonanywhere.com/
 
 If you really want to try all functionalities in My-Blog use this user:<br />
