@@ -1,6 +1,6 @@
 # My-Blog
 
-Front-end based on: https://github.com/BlackrockDigital/startbootstrap-clean-blog
+Front-end from: https://github.com/BlackrockDigital/startbootstrap-clean-blog
 
 ## What is My-Blog?
 
