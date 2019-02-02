@@ -39,4 +39,4 @@ If you really want to try all functionalities in My-Blog use this user:<br />
 ID: test_user<br />
 PW: my_password1 <br />
 test_user has Author permissions.<br />
-You can also do your own account and try out normal user functionalities. Be sure that you will write valid e-mail, because you will need to activate your account by link. Have fun!
+You can also do your own account and try out normal user functionalities. Be sure that you will write valid e-mail, because you will need to activate your account by link.<br />Have fun!
